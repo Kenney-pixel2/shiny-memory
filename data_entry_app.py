@@ -14,9 +14,8 @@ import csv
 variables = dict()
 records_saved = 0
 
-root = tk.Tk()
-root.title("ABQ Data Entry Application")
-root.columnconfigure(0, weight=1)
+class Application(tk.Tk):
+    """Application root window"""
 
 # Application heading
 ttk.Label(
@@ -292,4 +291,6 @@ save_button.configure(command=on_save)
 # Reset the form
 on_reset()
 
-root.mainloop()
+if __name__ == "__main__":
+    root = Application()
+    root.mainloop()
